@@ -7,7 +7,7 @@
 
 std::vector <user> get_user_data(){
     std::fstream userData;
-    userData.open("user_data.txt");
+    userData.open("lib/user_data.txt");
     std::vector<user> all_user;
     std::string data;
     userData >> data;
@@ -32,7 +32,7 @@ std::vector <user> get_user_data(){
 void save_user_data(std::vector <user> all_user)
 {
     std::fstream userData;
-    userData.open("user_data.txt",std::ios::trunc);
+    userData.open("lib/user_data.txt",std::ios::trunc);
     userData << all_user.size() << std::endl;
 
     for(int i=0; i<all_user.size(); i++){
@@ -47,9 +47,9 @@ void show_all_user(){
     // system("cls");
     std::vector<user> all_user = get_user_data();
     for(int i=0; i<all_user.size();i++){
-        std::cout << all_user[i].get_id() << std::endl;
-        std::cout << all_user[i].get_name() << std::endl;
-        std::cout << all_user[i].get_timeleft() << std::endl;
+        std::cout<< "user id:" << all_user[i].get_id() << std::endl;
+        std::cout<< "user name:" << all_user[i].get_name() << std::endl;
+        std::cout<< "user timeleft" << all_user[i].get_timeleft() <<" minutes"<<std::endl;
     }
     system("pause");
 }
@@ -61,7 +61,7 @@ void add_user(){
     int timeleft;
     std::cout << "enter user name" <<std:: endl;
     std::cin >> name;
-    std::cout << "enter user timeleft" <<std:: endl;
+    std::cout << "enter user timeleft: (minutes)"<< std:: endl;
     std::cin >> timeleft;
     user temp(id,name,timeleft);
     current_user.push_back(temp);

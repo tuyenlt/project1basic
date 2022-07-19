@@ -8,7 +8,7 @@
 
 int main()
 {
-    int opt = 0; 
+    int opt = 1; 
     while(opt != 3)
     {
         system("cls");
@@ -16,6 +16,7 @@ int main()
         std::cout << "1:checking user data" << std::endl;
         std::cout << "2:addding user:" << std::endl;
         std::cout << "3:quit" << std::endl;
+        std::cout << "enter your option:";
         std::cin >> opt;
         switch (opt)
         {
