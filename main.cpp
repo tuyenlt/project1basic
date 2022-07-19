@@ -6,9 +6,9 @@
 
 
 
-int main()
+int main() 
 {
-    int opt = 1; 
+    int opt = 0; 
     while(opt != 3)
     {
         system("cls");
@@ -22,9 +22,11 @@ int main()
         {
             case 1:
                 show_all_user();
+                opt = 0;
                 break;
             case 2:
                 add_user();
+                opt = 0;
                 break;
             default:
                 break;
