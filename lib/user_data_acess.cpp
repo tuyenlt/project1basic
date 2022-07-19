@@ -63,8 +63,8 @@ void add_user(){
     std::cin >> name;
     std::cout << "enter user timeleft: (minutes)"<< std:: endl;
     std::cin >> timeleft;
-    user temp(id,name,timeleft);
-    current_user.push_back(temp);
+    user new_user(id,name,timeleft);
+    current_user.push_back(new_user);
     save_user_data(current_user);
     std::cout << "add user success" << std::endl;
     system("pause");
