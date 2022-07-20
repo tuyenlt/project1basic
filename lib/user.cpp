@@ -3,13 +3,13 @@
 
 user :: user(){
     this -> name = "user_number";
-    this -> timeleft = 0;
+    this -> money = 0;
 }
 
-user :: user(int id,std::string name,int timeleft){
+user :: user(int id,std::string name,int money){
     this -> name = name;
     this -> id = id;
-    this -> timeleft = timeleft;
+    this -> money = money;
 }
 
 void user :: set_id(int id){
@@ -20,8 +20,8 @@ void user :: set_name(std::string name){
     this -> name = name;
 }
 
-void user :: set_timeleft(int timeleft){
-    this -> timeleft = timeleft;
+void user :: set_money(int money){
+    this -> money = money;
 }
 
 std::string user :: get_name(){
@@ -32,12 +32,12 @@ int user :: get_id(){
     return this -> id;
 }
 
-int user :: get_timeleft(){
-    return this -> timeleft;
+int user :: get_money(){
+    return this -> money;
 }
 
 void user :: add_time(int time){
-    this -> timeleft += time;
+    this -> money += time;
 }
 
 user :: ~user(){

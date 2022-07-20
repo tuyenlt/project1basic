@@ -6,8 +6,8 @@
 std::vector<user> get_user_data();
 void save_user_data(std::vector <user>);
 void add_user();
-void find_user();
-void show_all_user();
+void show_user(std::vector<user>);
 void delete_user();
+void search_user();
 
 #endif
