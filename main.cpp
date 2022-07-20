@@ -35,6 +35,8 @@ int main()
                 opt = 0;
             case 4:
                 delete_user();
+            case 5:
+                break;
             default:
                 break;
         }
